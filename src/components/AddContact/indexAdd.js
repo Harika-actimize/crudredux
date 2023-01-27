@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-// import { contact  } from "react-redux";
-// import { usenavigate } from "react-router";
 import { useSelector,useDispatch } from "react-redux";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
@@ -13,29 +11,9 @@ const AddPost = () => {
 const contacts= useSelector((state)=>state);
 const dispatch= useDispatch();
 console.log('add',contacts); 
-  // const navigate = usenavigate();
   const handleSubmit = (e) => {
 
        e.preventDefault();
-  // const checkEmail = contacts.find(contact=>contact.email=== email && email);
-  // // const checkPhone = contacts.find((connect)=>connect.number=== parseInt(number));
-  // const  checkPhone = contacts.find(
-  //   (contact)=> contact.phone === parseInt (phone)
-  // );
-  //      if (!email || !name || !phone) {
-
-  //           return toast.warning("Please fill in all fields!!");
-  //         }
-  //         if (checkEmail) {
-  //                console.log(checkEmail);
-  //                return toast.error("This email already exists!!");
-  //              }
-  //              if (checkPhone) {
-  //               // console.log(checkphone);
-  //               return toast.error("This email already exists!!");
-  //             }
-  //             console.log('contacts',contacts, )
-             
                 const data = {
                   name,
                   email,

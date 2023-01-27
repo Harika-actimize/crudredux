@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-// import { connect } from "react-redux";
 import {  useParams  } from "react-router";
 import { toast } from "react-toastify";
 import {Link} from "react-router-dom";
@@ -22,31 +21,12 @@ const EditContact = () => {
     setPhone(data.phone);
     setContacts(data);
   },[]);
-  // get hash id from 
   const navigate = useNavigate();
   const dispatch= useDispatch();
-  //const contacts= useSelector((state)=>state);
 console.log("email phone name",email, phone, name)
 
 const handleSubmit = (e) => {
   e.preventDefault();
-// const checkEmail = contacts.find(contact=>contact.email=== email && email);
-// const checkNumber = contacts.find((connect)=>connect.number=== parseInt(number));
-// const  checkNumber = contacts.find(
-//   (contact)=> contact.number === parseInt (number)
-// );
-  // if (!email || !name || !phone) {
-
-  //      return toast.warning("Please fill in all fields!!");
-  //    }
-    //  if (checkEmail) {
-    //         console.log(checkEmail);
-    //         return toast.error("This email already exists!!");
-    //       }
-         //  if (checkNumber) {
-         //   console.log(checkNumber);
-         //   return toast.error("This email already exists!!");
-         // }
          const data = {
           id,
                name,
@@ -59,41 +39,6 @@ const handleSubmit = (e) => {
               navigate("/");
      
 };
-  // const handleSubmit = (e) => {
-  //   e.preventDefault();
-  //   const checkContactEmailExists = contacts.filter((contact) =>
-  //     contact.email === email && contact.id !== currentContact.id
-  //       ? contact
-  //       : null
-  //   );
-  //   const checkContactPhoneExists = contacts.filter((contact) =>
-  //     contact.phone === phone && contact.id !== currentContact.id
-  //       ? contact
-  //       : null
-  //   );
-
-  //   if (!email || !name || !phone) {
-  //     return toast.warning("Please fill in all fields!!");
-  //   }
-  //   if (checkContactEmailExists.length > 0) {
-  //     return toast.error("This email already exists!!");
-  //   }
-  //   if (checkContactPhoneExists.length > 0) {
-  //     return toast.error("This phone number already exists!!");
-  //   }
-
-  //   const data = {
-  //     id: currentContact.id,
-  //     email,
-  //     name,
-  //     phone,
-  //   };
-
-  //   updateContact(data);
-  //   toast.success("Contact updated successfully!!");
-  //   // navigate("/");
-  // };
-
   return (
     <div className="container">
       <div className="row d-flex flex-column">
@@ -153,14 +98,4 @@ const handleSubmit = (e) => {
     </div>
   );
 };
-
-// const mapStateToProps = (state) => ({
-//   contacts: state,
-// });
-// const mapDispatchToProps = (dispatch) => ({
-//   updateContact: (data) => {
-//     dispatch({ type: "UPDATE_CONTACT", payload: data });
-//   },
-// });
-
 export default EditContact;

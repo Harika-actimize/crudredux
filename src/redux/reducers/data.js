@@ -39,9 +39,3 @@ export const deleteDataAxios = (id ) => {
       console.log(res.data);
     })
 }
-
-
-
-
-//Get
-//database.ref('/data').once()

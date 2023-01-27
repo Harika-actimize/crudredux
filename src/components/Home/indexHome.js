@@ -20,7 +20,7 @@ const Home = () => {
 
   const keys = Object.keys(contacts);
   console.log('//////////////', contacts, keys)
-  return (//import { async } from "@firebase/util";
+  return (
 
     <div className="container">
       <div className="row d-flex flex-column">
